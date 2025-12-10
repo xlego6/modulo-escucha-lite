@@ -1,11 +1,12 @@
 # Modulo Escucha Lite
 
-Sistema ligero de gestion de testimonios basado en modulo-escucha.
+Sistema ligero de gestion de testimonios basado en https://github.com/olimaz/modulo-escucha
 
 ## Requisitos
 
 - Docker
 - Docker Compose
+- Python 9+ para los servicios NER y Transcripción
 
 ## Instalacion Rapida
 
@@ -91,13 +92,21 @@ Para adaptar funcionalidades del modulo original:
 2. Copiar y simplificar controladores/modelos necesarios
 3. Adaptar vistas Blade
 
+## Modulos avanzados
+
+- [ ] Login OK, sin LDAP o Google por ahora
+- [ ] Entrevistas OK, añadir campos adicionales
+- [ ] Personas OK
+- [ ] Gestion de Adjuntos OK
+- [ ] Buscador OK
+- [ ] Exportacion Excel OK
+- [ ] Traza de actividad OK, revisar bugs
+- [ ] Catálogos OK
+
 ## Modulos Pendientes
 
-- [ ] CRUD Entrevistas
-- [ ] CRUD Personas
-- [ ] Gestion de Adjuntos
-- [ ] Buscador
-- [ ] Estadisticas
-- [ ] Exportacion Excel
-- [ ] Gestion de Usuarios
-- [ ] Permisos
+- [ ] Estadisticas - Funcionalidad básica OK, pendiente revisar métricas e indicadores específicos
+- [ ] Gestion de Usuarios - Funcionalidad básica, pendiente gestión de perfiles
+- [ ] Permisos - OK para brindar acceso. Pendiente gestión de perfiles
+- [ ] Módulo procesamiento - Pendiente, servicios suben, pero no funciona aún
+- [ ] Mapa - No aparecen puntos aún. Resolver problema con municipios
