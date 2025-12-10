@@ -79,9 +79,11 @@ docker exec -it mel-app bash
 docker exec -it mel-app php artisan [comando]
 
 # Reiniciar BD (elimina datos)
+
 docker-compose down -v
-rm -rf postgres-data
+rm -rf postgres-data # Si da error de base de datos al loguear, se puede borrar la carpeta postgres-data de la instalación y se vuelve a levantar en docker 
 docker-compose up -d
+
 ```
 
 ## Modulos avanzados
