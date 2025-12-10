@@ -1,0 +1,45 @@
+version: '3'
+services:
+    web:
+        image: nginx
+        container_name: mel-web
+        volumes:
+            - ./www:/var/www
+            - ./.docker/conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        ports:
+            - 8001:80
+        restart: unless-stopped
+        depends_on:
+            - php
+            - db
+        networks:
+            - mel
+    php:
+        build: .docker
+        restart: always
+        container_name: mel-app
+        volumes:
+            - ./.docker/conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./www:/var/www
+        depends_on:
+            - db
+        networks:
+            - mel
+    db:
+        image: postgres:11-alpine
+        container_name: mel-db
+        restart: always
+        environment:
+            POSTGRES_USER: dba
+            POSTGRES_PASSWORD: sql
+            POSTGRES_DB: testimonios
+        ports:
+            - 5556:5432
+        volumes:
+            - ./postgres-data:/var/lib/postgresql/data
+            - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - mel
+networks:
+  mel:
+    driver: bridge

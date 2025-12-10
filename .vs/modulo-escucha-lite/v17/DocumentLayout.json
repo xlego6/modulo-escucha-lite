@@ -1,0 +1,494 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\modulo-escucha\\modulo-escucha-lite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\auth\\login.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\auth\\login.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\buscador\\index.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\buscador\\index.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Services\\ProcesamientoService.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Services\\ProcesamientoService.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\User.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\User.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\index.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\procesamientos\\index.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\entidades.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\procesamientos\\entidades.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\Adjunto.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Models\\Adjunto.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\AdjuntoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Http\\Controllers\\AdjuntoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\edicion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\procesamientos\\edicion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\anonimizacion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\resources\\views\\procesamientos\\anonimizacion.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\bootstrap\\app.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\bootstrap\\app.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\RouteServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Providers\\RouteServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\EventServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Providers\\EventServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AuthServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Providers\\AuthServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AppServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Providers\\AppServiceProvider.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatItem.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Models\\CatItem.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\UsuarioController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Http\\Controllers\\UsuarioController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\ProcesamientoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Http\\Controllers\\ProcesamientoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatCat.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Models\\CatCat.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\CatalogoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\app\\Http\\Controllers\\CatalogoController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\cache.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\cache.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\auth.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\auth.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\app.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\app.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\public\\index.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\public\\index.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\view.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\view.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\session.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\session.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\filesystems.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\filesystems.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\database.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:www\\config\\database.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 20,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdjuntoController.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\AdjuntoController.php",
+              "RelativeDocumentMoniker": "www\\app\\Http\\Controllers\\AdjuntoController.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\AdjuntoController.php",
+              "RelativeToolTip": "www\\app\\Http\\Controllers\\AdjuntoController.php",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAFcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:48:36.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Adjunto.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\Adjunto.php",
+              "RelativeDocumentMoniker": "www\\app\\Models\\Adjunto.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\Adjunto.php",
+              "RelativeToolTip": "www\\app\\Models\\Adjunto.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:47:27.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "entidades.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\entidades.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\procesamientos\\entidades.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\entidades.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\procesamientos\\entidades.blade.php",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:28:01.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "editar-transcripcion.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\procesamientos\\editar-transcripcion.blade.php",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:27:56.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "edicion.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\edicion.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\procesamientos\\edicion.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\edicion.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\procesamientos\\edicion.blade.php",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:27:52.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "anonimizacion.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\anonimizacion.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\procesamientos\\anonimizacion.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\anonimizacion.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\procesamientos\\anonimizacion.blade.php",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:27:46.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\index.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\procesamientos\\index.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\procesamientos\\index.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\procesamientos\\index.blade.php",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:26:48.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\User.php",
+              "RelativeDocumentMoniker": "www\\app\\User.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\User.php",
+              "RelativeToolTip": "www\\app\\User.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:25:18.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProcesamientoService.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Services\\ProcesamientoService.php",
+              "RelativeDocumentMoniker": "www\\app\\Services\\ProcesamientoService.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Services\\ProcesamientoService.php",
+              "RelativeToolTip": "www\\app\\Services\\ProcesamientoService.php",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:42.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RouteServiceProvider.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\RouteServiceProvider.php",
+              "RelativeDocumentMoniker": "www\\app\\Providers\\RouteServiceProvider.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\RouteServiceProvider.php",
+              "RelativeToolTip": "www\\app\\Providers\\RouteServiceProvider.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:40.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EventServiceProvider.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\EventServiceProvider.php",
+              "RelativeDocumentMoniker": "www\\app\\Providers\\EventServiceProvider.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\EventServiceProvider.php",
+              "RelativeToolTip": "www\\app\\Providers\\EventServiceProvider.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:38.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthServiceProvider.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AuthServiceProvider.php",
+              "RelativeDocumentMoniker": "www\\app\\Providers\\AuthServiceProvider.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AuthServiceProvider.php",
+              "RelativeToolTip": "www\\app\\Providers\\AuthServiceProvider.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:37.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppServiceProvider.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AppServiceProvider.php",
+              "RelativeDocumentMoniker": "www\\app\\Providers\\AppServiceProvider.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Providers\\AppServiceProvider.php",
+              "RelativeToolTip": "www\\app\\Providers\\AppServiceProvider.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:36.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CatItem.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatItem.php",
+              "RelativeDocumentMoniker": "www\\app\\Models\\CatItem.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatItem.php",
+              "RelativeToolTip": "www\\app\\Models\\CatItem.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:24:18.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UsuarioController.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\UsuarioController.php",
+              "RelativeDocumentMoniker": "www\\app\\Http\\Controllers\\UsuarioController.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\UsuarioController.php",
+              "RelativeToolTip": "www\\app\\Http\\Controllers\\UsuarioController.php",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:23:51.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProcesamientoController.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\ProcesamientoController.php",
+              "RelativeDocumentMoniker": "www\\app\\Http\\Controllers\\ProcesamientoController.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\ProcesamientoController.php",
+              "RelativeToolTip": "www\\app\\Http\\Controllers\\ProcesamientoController.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:22:39.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CatCat.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatCat.php",
+              "RelativeDocumentMoniker": "www\\app\\Models\\CatCat.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Models\\CatCat.php",
+              "RelativeToolTip": "www\\app\\Models\\CatCat.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:22:16.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CatalogoController.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\CatalogoController.php",
+              "RelativeDocumentMoniker": "www\\app\\Http\\Controllers\\CatalogoController.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\app\\Http\\Controllers\\CatalogoController.php",
+              "RelativeToolTip": "www\\app\\Http\\Controllers\\CatalogoController.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:21:59.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\buscador\\index.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\buscador\\index.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\buscador\\index.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\buscador\\index.blade.php",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:13:48.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\bootstrap\\app.php",
+              "RelativeDocumentMoniker": "www\\bootstrap\\app.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\bootstrap\\app.php",
+              "RelativeToolTip": "www\\bootstrap\\app.php",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:02:35.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.blade.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\auth\\login.blade.php",
+              "RelativeDocumentMoniker": "www\\resources\\views\\auth\\login.blade.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\resources\\views\\auth\\login.blade.php",
+              "RelativeToolTip": "www\\resources\\views\\auth\\login.blade.php",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:04:38.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "index.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\public\\index.php",
+              "RelativeDocumentMoniker": "www\\public\\index.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\public\\index.php",
+              "RelativeToolTip": "www\\public\\index.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:04:17.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "view.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\view.php",
+              "RelativeDocumentMoniker": "www\\config\\view.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\view.php",
+              "RelativeToolTip": "www\\config\\view.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:04:08.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "session.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\session.php",
+              "RelativeDocumentMoniker": "www\\config\\session.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\session.php",
+              "RelativeToolTip": "www\\config\\session.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:04:04.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "filesystems.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\filesystems.php",
+              "RelativeDocumentMoniker": "www\\config\\filesystems.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\filesystems.php",
+              "RelativeToolTip": "www\\config\\filesystems.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:04:01.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "database.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\database.php",
+              "RelativeDocumentMoniker": "www\\config\\database.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\database.php",
+              "RelativeToolTip": "www\\config\\database.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:03:56.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "cache.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\cache.php",
+              "RelativeDocumentMoniker": "www\\config\\cache.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\cache.php",
+              "RelativeToolTip": "www\\config\\cache.php",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:03:45.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "auth.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\auth.php",
+              "RelativeDocumentMoniker": "www\\config\\auth.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\auth.php",
+              "RelativeToolTip": "www\\config\\auth.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:03:38.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "app.php",
+              "DocumentMoniker": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\app.php",
+              "RelativeDocumentMoniker": "www\\config\\app.php",
+              "ToolTip": "D:\\modulo-escucha\\modulo-escucha-lite\\www\\config\\app.php",
+              "RelativeToolTip": "www\\config\\app.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-08T16:03:00.202Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
