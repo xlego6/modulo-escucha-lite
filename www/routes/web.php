@@ -89,10 +89,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('permisos', [PermisoController::class, 'index'])->name('permisos.index');
     Route::get('permisos/create', [PermisoController::class, 'create'])->name('permisos.create');
     Route::post('permisos', [PermisoController::class, 'store'])->name('permisos.store');
-    Route::get('permisos/{id}', [PermisoController::class, 'show'])->name('permisos.show');
-    Route::delete('permisos/{id}', [PermisoController::class, 'destroy'])->name('permisos.destroy');
     Route::get('permisos/entrevista/{id}', [PermisoController::class, 'porEntrevista'])->name('permisos.por_entrevista');
     Route::get('permisos/usuario/{id}', [PermisoController::class, 'porUsuario'])->name('permisos.por_usuario');
+    Route::get('permisos/{id}', [PermisoController::class, 'show'])->name('permisos.show');
+    Route::delete('permisos/{id}', [PermisoController::class, 'destroy'])->name('permisos.destroy');
+
+    // Desclasificación
+    Route::get('desclasificacion', [PermisoController::class, 'desclasificar'])->name('permisos.desclasificar');
+    Route::post('desclasificacion', [PermisoController::class, 'storeDesclasificacion'])->name('permisos.store_desclasificacion');
+
+    // Accesos otorgados (vista consolidada)
+    Route::get('accesos-otorgados', [PermisoController::class, 'accesosOtorgados'])->name('permisos.accesos_otorgados');
+    Route::get('permisos/{id}/soporte', [PermisoController::class, 'descargarSoporte'])->name('permisos.descargar_soporte');
 
     // Catalogos
     Route::get('catalogos', [CatalogoController::class, 'index'])->name('catalogos.index');

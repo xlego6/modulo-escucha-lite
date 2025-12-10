@@ -154,11 +154,13 @@ class EntrevistaController extends Controller
 
             // Registrar traza
             TrazaActividad::create([
+                'fecha_hora' => now(),
                 'id_usuario' => $user->id,
-                'accion' => 'crear_entrevista',
-                'tabla' => 'e_ind_fvt',
+                'accion' => 'crear',
+                'objeto' => 'entrevista',
                 'id_registro' => $entrevista->id_e_ind_fvt,
-                'descripcion' => 'Creación de entrevista ' . $codigo,
+                'codigo' => $codigo,
+                'referencia' => 'Creacion de entrevista: ' . $entrevista->titulo,
                 'ip' => $request->ip(),
             ]);
 
@@ -299,11 +301,13 @@ class EntrevistaController extends Controller
 
             // Registrar traza
             TrazaActividad::create([
+                'fecha_hora' => now(),
                 'id_usuario' => $user->id,
-                'accion' => 'editar_entrevista',
-                'tabla' => 'e_ind_fvt',
+                'accion' => 'editar',
+                'objeto' => 'entrevista',
                 'id_registro' => $entrevista->id_e_ind_fvt,
-                'descripcion' => 'Edición de entrevista ' . $entrevista->entrevista_codigo,
+                'codigo' => $entrevista->entrevista_codigo,
+                'referencia' => 'Edicion de entrevista: ' . $entrevista->titulo,
                 'ip' => $request->ip(),
             ]);
 
@@ -335,11 +339,13 @@ class EntrevistaController extends Controller
         $entrevista->update(['id_activo' => 0]);
 
         TrazaActividad::create([
+            'fecha_hora' => now(),
             'id_usuario' => $user->id,
-            'accion' => 'eliminar_entrevista',
-            'tabla' => 'e_ind_fvt',
+            'accion' => 'eliminar',
+            'objeto' => 'entrevista',
             'id_registro' => $entrevista->id_e_ind_fvt,
-            'descripcion' => 'Eliminación de entrevista ' . $entrevista->entrevista_codigo,
+            'codigo' => $entrevista->entrevista_codigo,
+            'referencia' => 'Eliminacion de entrevista: ' . $entrevista->titulo,
             'ip' => request()->ip(),
         ]);
 

@@ -32,6 +32,24 @@
 
             <div class="col-md-6">
                 <div class="form-group">
+                    <label for="id_equipo_estrategia">Equipo/Estrategia</label>
+                    <select class="form-control select2" id="id_equipo_estrategia" name="id_equipo_estrategia">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                    <small class="form-text text-muted">Equipo o estrategia de la dependencia</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nombre_proyecto">Nombre Proyecto/Investigacion/Caso</label>
+                    <input type="text" class="form-control" id="nombre_proyecto" name="nombre_proyecto" maxlength="500" value="<?php echo e($entrevista->nombre_proyecto); ?>">
+                    <small class="form-text text-muted">Nombre del proyecto o investigacion al que pertenece</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
                     <label for="id_tipo_testimonio" class="required-field">Tipo de Testimonio</label>
                     <select class="form-control select2" id="id_tipo_testimonio" name="id_tipo_testimonio" required>
                         <option value="">-- Seleccione --</option>
@@ -220,6 +238,23 @@ $(document).ready(function() {
     ?>
     <?php if(count($areasCompatibles) > 0): ?>
     $('#areas_compatibles').val(<?php echo json_encode($areasCompatibles); ?>).trigger('change');
+    <?php endif; ?>
+
+    // Cargar equipos/estrategias si hay dependencia seleccionada
+    <?php if($entrevista->id_dependencia_origen): ?>
+    var equiposData = <?php echo json_encode($catalogos['equipos_estrategias']); ?>;
+    var depId = '<?php echo e($entrevista->id_dependencia_origen); ?>';
+    var equipoSelect = $('#id_equipo_estrategia');
+
+    equipoSelect.empty().append('<option value="">-- Seleccione --</option>');
+    if (equiposData[depId]) {
+        $.each(equiposData[depId], function(id, nombre) {
+            equipoSelect.append('<option value="' + id + '">' + nombre + '</option>');
+        });
+    }
+    <?php if($entrevista->id_equipo_estrategia): ?>
+    equipoSelect.val('<?php echo e($entrevista->id_equipo_estrategia); ?>');
+    <?php endif; ?>
     <?php endif; ?>
 });
 </script>

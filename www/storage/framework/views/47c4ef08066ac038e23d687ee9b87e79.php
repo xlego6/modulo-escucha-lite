@@ -179,6 +179,17 @@
                                                 <span class="ml-2"><i class="fas fa-user"></i> <?php echo e($entrevista->rel_entrevistador->rel_usuario->name); ?></span>
                                             <?php endif; ?>
                                         </div>
+                                        <div class="text-muted small mt-1">
+                                            <?php if($entrevista->rel_dependencia_origen): ?>
+                                                <span class="badge badge-light"><i class="fas fa-building"></i> <?php echo e($entrevista->rel_dependencia_origen->descripcion); ?></span>
+                                            <?php endif; ?>
+                                            <?php if($entrevista->rel_equipo_estrategia): ?>
+                                                <span class="badge badge-light ml-1"><i class="fas fa-users-cog"></i> <?php echo e($entrevista->rel_equipo_estrategia->descripcion); ?></span>
+                                            <?php endif; ?>
+                                            <?php if($entrevista->nombre_proyecto): ?>
+                                                <span class="badge badge-light ml-1"><i class="fas fa-project-diagram"></i> <?php echo e(\Illuminate\Support\Str::limit($entrevista->nombre_proyecto, 30)); ?></span>
+                                            <?php endif; ?>
+                                        </div>
 
                                         <!-- Mostrar coincidencias -->
                                         <div class="mt-2">

@@ -57,6 +57,14 @@
                                 <td>{{ $entrevista->rel_dependencia_origen->descripcion ?? 'No especificado' }}</td>
                             </tr>
                             <tr>
+                                <th>Equipo/Estrategia:</th>
+                                <td>{{ $entrevista->rel_equipo_estrategia->descripcion ?? 'No especificado' }}</td>
+                            </tr>
+                            <tr>
+                                <th>Proyecto/Investigacion:</th>
+                                <td>{{ $entrevista->nombre_proyecto ?? 'No especificado' }}</td>
+                            </tr>
+                            <tr>
                                 <th>Tipo Testimonio:</th>
                                 <td>{{ $entrevista->rel_tipo_testimonio->descripcion ?? 'No especificado' }}</td>
                             </tr>

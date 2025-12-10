@@ -34,6 +34,8 @@ class Entrevista extends Model
         'id_etnico',
         // Nuevos campos Paso 1
         'id_dependencia_origen',
+        'id_equipo_estrategia',
+        'nombre_proyecto',
         'id_tipo_testimonio',
         'num_testimoniantes',
         'id_idioma',
@@ -93,6 +95,10 @@ class Entrevista extends Model
 
     public function rel_area_compatible() {
         return $this->belongsTo(CatItem::class, 'id_area_compatible', 'id_item');
+    }
+
+    public function rel_equipo_estrategia() {
+        return $this->belongsTo(CatItem::class, 'id_equipo_estrategia', 'id_item');
     }
 
     public function rel_formatos() {

@@ -277,6 +277,8 @@ $(document).ready(function() {
         return {
             titulo: $('#titulo').val(),
             id_dependencia_origen: $('#id_dependencia_origen').val(),
+            id_equipo_estrategia: $('#id_equipo_estrategia').val(),
+            nombre_proyecto: $('#nombre_proyecto').val(),
             id_tipo_testimonio: $('#id_tipo_testimonio').val(),
             formatos: formatos,
             num_testimoniantes: $('#num_testimoniantes').val(),
@@ -492,6 +494,23 @@ $(document).ready(function() {
 
     // === LUGARES MENCIONADOS ===
     let lugarIndex = 0;
+
+    // === EQUIPO/ESTRATEGIA DEPENDIENTE DE DEPENDENCIA ===
+    var equiposData = {!! json_encode($catalogos['equipos_estrategias']) !!};
+
+    // Cuando cambia Dependencia de Origen, actualizar opciones de Equipo/Estrategia
+    $('#id_dependencia_origen').on('change', function() {
+        var depId = $(this).val();
+        var equipoSelect = $('#id_equipo_estrategia');
+
+        equipoSelect.empty().append('<option value="">-- Seleccione --</option>');
+
+        if (depId && equiposData[depId]) {
+            $.each(equiposData[depId], function(id, nombre) {
+                equipoSelect.append('<option value="' + id + '">' + nombre + '</option>');
+            });
+        }
+    });
 
     // Construir opciones de departamentos desde PHP
     var departamentosData = {!! json_encode($catalogos['departamentos']) !!};

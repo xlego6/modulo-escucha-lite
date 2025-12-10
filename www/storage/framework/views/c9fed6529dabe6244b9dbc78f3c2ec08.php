@@ -331,7 +331,8 @@ $(document).ready(function() {
         $.ajax({
             url: url,
             method: 'POST',
-            data: data,
+            contentType: 'application/json',
+            data: JSON.stringify(data),
             success: function(response) {
                 if (response.success) {
                     if (response.id_e_ind_fvt) {
@@ -372,6 +373,8 @@ $(document).ready(function() {
         return {
             titulo: $('#titulo').val(),
             id_dependencia_origen: $('#id_dependencia_origen').val(),
+            id_equipo_estrategia: $('#id_equipo_estrategia').val(),
+            nombre_proyecto: $('#nombre_proyecto').val(),
             id_tipo_testimonio: $('#id_tipo_testimonio').val(),
             formatos: formatos,
             num_testimoniantes: $('#num_testimoniantes').val(),
@@ -436,6 +439,19 @@ $(document).ready(function() {
 
     // Obtener datos del Paso 3
     function obtenerDatosPaso3() {
+        // Recolectar lugares mencionados
+        var lugares = [];
+        $('.lugar-mencionado-row').each(function() {
+            var depto = $(this).find('.lugar-depto').val();
+            var muni = $(this).find('.lugar-muni').val();
+            if (depto || muni) {
+                lugares.push({
+                    id_departamento: depto || null,
+                    id_municipio: muni || null
+                });
+            }
+        });
+
         return {
             fecha_hechos_inicial: $('#fecha_hechos_inicial').val(),
             fecha_hechos_final: $('#fecha_hechos_final').val(),
@@ -449,6 +465,7 @@ $(document).ready(function() {
             contenido_discapacidades: $('#contenido_discapacidades').val() || [],
             contenido_hechos: $('#contenido_hechos').val() || [],
             contenido_responsables: $('#contenido_responsables').val() || [],
+            contenido_lugares: lugares,
             responsables_individuales: $('#responsables_individuales').val(),
             temas_abordados: $('#temas_abordados').val()
         };
@@ -646,6 +663,23 @@ $(document).ready(function() {
         muniSelect.val('<?php echo e($entrevista->entrevista_lugar); ?>');
     });
     <?php endif; ?>
+
+    // === EQUIPO/ESTRATEGIA DEPENDIENTE DE DEPENDENCIA ===
+    var equiposData = <?php echo json_encode($catalogos['equipos_estrategias']); ?>;
+
+    // Cuando cambia Dependencia de Origen, actualizar opciones de Equipo/Estrategia
+    $('#id_dependencia_origen').on('change', function() {
+        var depId = $(this).val();
+        var equipoSelect = $('#id_equipo_estrategia');
+
+        equipoSelect.empty().append('<option value="">-- Seleccione --</option>');
+
+        if (depId && equiposData[depId]) {
+            $.each(equiposData[depId], function(id, nombre) {
+                equipoSelect.append('<option value="' + id + '">' + nombre + '</option>');
+            });
+        }
+    });
 
     // === LUGARES MENCIONADOS ===
     let lugarIndex = 0;

@@ -151,6 +151,7 @@ class AdjuntoController extends Controller
             'accion' => 'descargar_adjunto',
             'objeto' => 'adjunto',
             'id_registro' => $adjunto->id_adjunto,
+            'codigo' => $adjunto->rel_entrevista->entrevista_codigo ?? null,
             'referencia' => 'Descarga de archivo: ' . $adjunto->nombre_original,
             'ip' => request()->ip(),
         ]);
@@ -206,6 +207,9 @@ class AdjuntoController extends Controller
             Storage::disk('public')->delete($adjunto->ubicacion);
         }
 
+        // Obtener código de entrevista antes de eliminar
+        $codigo_entrevista = $adjunto->rel_entrevista->entrevista_codigo ?? null;
+
         // Eliminar registro
         $adjunto->delete();
 
@@ -216,6 +220,7 @@ class AdjuntoController extends Controller
             'accion' => 'eliminar_adjunto',
             'objeto' => 'adjunto',
             'id_registro' => $id,
+            'codigo' => $codigo_entrevista,
             'referencia' => 'Eliminacion de archivo: ' . $nombre,
             'ip' => request()->ip(),
         ]);

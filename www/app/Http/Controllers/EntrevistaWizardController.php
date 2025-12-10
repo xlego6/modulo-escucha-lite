@@ -116,7 +116,7 @@ class EntrevistaWizardController extends Controller
             } else {
                 // Crear nueva
                 $siguiente_numero = $this->calcularSiguienteNumero($entrevistador->id_entrevistador);
-                $codigo = $this->generarCodigo($entrevistador, $siguiente_numero);
+                $codigo = $this->generarCodigo($entrevistador, $siguiente_numero, $request->id_dependencia_origen);
                 $correlativo = $this->calcularCorrelativo();
 
                 $data = $this->getPaso1Data($request, $entrevistador);
@@ -141,11 +141,13 @@ class EntrevistaWizardController extends Controller
 
             // Registrar traza
             TrazaActividad::create([
+                'fecha_hora' => now(),
                 'id_usuario' => $user->id,
-                'accion' => $request->id_e_ind_fvt ? 'editar_entrevista_paso1' : 'crear_entrevista_paso1',
-                'tabla' => 'e_ind_fvt',
+                'accion' => $request->id_e_ind_fvt ? 'editar' : 'crear',
+                'objeto' => 'entrevista',
                 'id_registro' => $id_entrevista,
-                'descripcion' => 'Paso 1: Testimoniales - ' . $entrevista->entrevista_codigo,
+                'codigo' => $entrevista->entrevista_codigo,
+                'referencia' => 'Paso 1: Datos Testimoniales - ' . $entrevista->titulo,
                 'ip' => $request->ip(),
             ]);
 
@@ -265,11 +267,13 @@ class EntrevistaWizardController extends Controller
 
             // Registrar traza
             TrazaActividad::create([
+                'fecha_hora' => now(),
                 'id_usuario' => $user->id,
-                'accion' => 'guardar_entrevista_paso2',
-                'tabla' => 'persona_entrevistada',
+                'accion' => 'editar',
+                'objeto' => 'entrevista',
                 'id_registro' => $entrevista->id_e_ind_fvt,
-                'descripcion' => 'Paso 2: Testimoniantes - ' . count($request->testimoniantes) . ' persona(s)',
+                'codigo' => $entrevista->entrevista_codigo,
+                'referencia' => 'Paso 2: Testimoniantes - ' . count($request->testimoniantes) . ' persona(s)',
                 'ip' => $request->ip(),
             ]);
 
@@ -331,11 +335,13 @@ class EntrevistaWizardController extends Controller
 
             // Registrar traza
             TrazaActividad::create([
+                'fecha_hora' => now(),
                 'id_usuario' => $user->id,
-                'accion' => 'guardar_entrevista_paso3',
-                'tabla' => 'contenido_testimonio',
+                'accion' => 'editar',
+                'objeto' => 'entrevista',
                 'id_registro' => $entrevista->id_e_ind_fvt,
-                'descripcion' => 'Paso 3: Contenido - ' . $entrevista->entrevista_codigo,
+                'codigo' => $entrevista->entrevista_codigo,
+                'referencia' => 'Paso 3: Contenido del Testimonio',
                 'ip' => $request->ip(),
             ]);
 
@@ -361,6 +367,8 @@ class EntrevistaWizardController extends Controller
         return [
             'titulo' => $request->titulo,
             'id_dependencia_origen' => $request->id_dependencia_origen,
+            'id_equipo_estrategia' => $request->id_equipo_estrategia,
+            'nombre_proyecto' => $request->nombre_proyecto,
             'id_tipo_testimonio' => $request->id_tipo_testimonio,
             'num_testimoniantes' => $request->num_testimoniantes,
             'id_territorio' => $request->id_territorio,
@@ -533,7 +541,6 @@ class EntrevistaWizardController extends Controller
                     'id_e_ind_fvt' => $id_e_ind_fvt,
                     'id_departamento' => $lugar['id_departamento'] ?? null,
                     'id_municipio' => $lugar['id_municipio'] ?? null,
-                    'created_at' => now(),
                 ]);
             }
         }
@@ -544,8 +551,20 @@ class EntrevistaWizardController extends Controller
      */
     private function getCatalogos()
     {
+        // Obtener equipos/estrategias con su dependencia padre (guardada en campo 'otro')
+        $equipos_raw = CatItem::where('id_cat', 18)->orderBy('orden')->get();
+        $equipos_por_dependencia = [];
+        foreach ($equipos_raw as $equipo) {
+            $dep_id = $equipo->otro; // id_item de la dependencia padre
+            if (!isset($equipos_por_dependencia[$dep_id])) {
+                $equipos_por_dependencia[$dep_id] = [];
+            }
+            $equipos_por_dependencia[$dep_id][$equipo->id_item] = $equipo->descripcion;
+        }
+
         return [
             'dependencias' => CatItem::where('id_cat', 4)->orderBy('orden')->pluck('descripcion', 'id_item'),
+            'equipos_estrategias' => $equipos_por_dependencia, // Array por dependencia
             'tipos_testimonio' => CatItem::where('id_cat', 5)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'formatos' => CatItem::where('id_cat', 100)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'modalidades' => CatItem::where('id_cat', 7)->orderBy('orden')->pluck('descripcion', 'id_item'),
@@ -577,14 +596,42 @@ class EntrevistaWizardController extends Controller
     }
 
     /**
-     * Generar código de entrevista
+     * Generar código de entrevista según Dependencia de Origen
+     * Formato: PREFIJO-NNNN-NNN
+     * Prefijos según dependencia:
+     * - DMMC: Dirección Museo de Memoria y Conflicto
+     * - DCMH: Dirección de Construcción de Memoria Histórica
+     * - DAV: Dirección de Acuerdos de la Verdad
+     * - DADH: Dirección de Archivo de los Derechos Humanos
+     * - TRA: Estrategias (Comunicaciones, General, Pedagogía, Enfoques, Psicosocial, Territorialización)
      */
-    private function generarCodigo($entrevistador, $numero)
+    private function generarCodigo($entrevistador, $numero, $id_dependencia_origen = null)
     {
-        $prefijo = 'VI';
+        // Obtener prefijo según dependencia de origen
+        $prefijo = $this->obtenerPrefijoCodigo($id_dependencia_origen);
+
         $num_ent = str_pad($entrevistador->numero_entrevistador ?? 0, 4, '0', STR_PAD_LEFT);
         $num_entr = str_pad($numero, 3, '0', STR_PAD_LEFT);
         return $prefijo . '-' . $num_ent . '-' . $num_entr;
+    }
+
+    /**
+     * Obtener prefijo de código según dependencia de origen
+     */
+    private function obtenerPrefijoCodigo($id_dependencia_origen)
+    {
+        if (!$id_dependencia_origen) {
+            return 'TES'; // Default si no hay dependencia
+        }
+
+        // Buscar el abreviado de la dependencia
+        $dependencia = CatItem::find($id_dependencia_origen);
+
+        if ($dependencia && $dependencia->abreviado) {
+            return $dependencia->abreviado;
+        }
+
+        return 'TES';
     }
 
     /**

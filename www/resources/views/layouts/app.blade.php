@@ -154,9 +154,21 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('permisos.index') }}" class="nav-link {{ request()->routeIs('permisos.*') ? 'active' : '' }}">
+                                <a href="{{ route('permisos.index') }}" class="nav-link {{ request()->routeIs('permisos.index') || request()->routeIs('permisos.create') || request()->routeIs('permisos.show') ? 'active' : '' }}">
                                     <i class="fas fa-key nav-icon"></i>
                                     <p>Permisos</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('permisos.desclasificar') }}" class="nav-link {{ request()->routeIs('permisos.desclasificar') ? 'active' : '' }}">
+                                    <i class="fas fa-unlock-alt nav-icon"></i>
+                                    <p>Desclasificacion</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('permisos.accesos_otorgados') }}" class="nav-link {{ request()->routeIs('permisos.accesos_otorgados') ? 'active' : '' }}">
+                                    <i class="fas fa-check-circle nav-icon"></i>
+                                    <p>Accesos Otorgados</p>
                                 </a>
                             </li>
                             <li class="nav-item">

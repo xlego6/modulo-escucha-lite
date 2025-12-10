@@ -85,9 +85,10 @@ class BuscadorController extends Controller
             ->where(function($q) use ($termino) {
                 $q->where('titulo', 'ILIKE', '%' . $termino . '%')
                   ->orWhere('entrevista_codigo', 'ILIKE', '%' . $termino . '%')
-                  ->orWhere('anotaciones', 'ILIKE', '%' . $termino . '%');
+                  ->orWhere('anotaciones', 'ILIKE', '%' . $termino . '%')
+                  ->orWhere('nombre_proyecto', 'ILIKE', '%' . $termino . '%');
             })
-            ->with(['rel_entrevistador', 'rel_entrevistador.rel_usuario', 'rel_lugar_entrevista'])
+            ->with(['rel_entrevistador', 'rel_entrevistador.rel_usuario', 'rel_lugar_entrevista', 'rel_dependencia_origen', 'rel_equipo_estrategia'])
             ->limit($limite)
             ->get();
 
@@ -104,6 +105,9 @@ class BuscadorController extends Controller
             }
             if (stripos($e->anotaciones ?? '', $termino) !== false) {
                 $coincidencias[] = 'Anotaciones';
+            }
+            if (stripos($e->nombre_proyecto ?? '', $termino) !== false) {
+                $coincidencias[] = 'Proyecto/Investigacion';
             }
             $e->setAttribute('coincidencias', $coincidencias);
         }
@@ -204,6 +208,9 @@ class BuscadorController extends Controller
     {
         $documentos = Adjunto::with(['rel_entrevista', 'rel_tipo'])
             ->where('existe_archivo', 1)
+            ->whereHas('rel_entrevista', function($q) {
+                $q->where('id_activo', 1);
+            })
             ->where(function($q) use ($termino) {
                 $q->where('nombre_original', 'ILIKE', '%' . $termino . '%')
                   ->orWhere('texto_extraido', 'ILIKE', '%' . $termino . '%');
@@ -323,6 +330,9 @@ class BuscadorController extends Controller
 
         // Buscar en documentos
         $documentos = Adjunto::where('existe_archivo', 1)
+            ->whereHas('rel_entrevista', function($q) {
+                $q->where('id_activo', 1);
+            })
             ->where(function($q) use ($termino) {
                 $q->where('nombre_original', 'ILIKE', '%' . $termino . '%')
                   ->orWhere('texto_extraido', 'ILIKE', '%' . $termino . '%');
