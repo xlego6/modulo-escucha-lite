@@ -6,7 +6,7 @@ Sistema ligero de gestion de testimonios basado en https://github.com/olimaz/mod
 
 - Docker
 - Docker Compose
-- Python 9+ para los servicios NER y Transcripción
+- Python 3.9+ para los servicios NER y Transcripción
 
 ## Instalacion Rapida
 
