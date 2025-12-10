@@ -102,3 +102,25 @@ docker-compose up -d
 - [ ] Permisos - OK para brindar acceso. Pendiente gestión de perfiles
 - [ ] Módulo procesamiento - Pendiente, servicios suben, pero no funciona aún
 - [ ] Mapa - No aparecen puntos aún. Resolver problema con municipios
+
+
+## Otros pendientes:
+
+
+
+Pendientes 10/12/2025
+Chequear que detalles de la entrevista muestre los cambios – Perma, no borrar
+Chequear que la buscadora busque los campos con los cambios. -Perma, no borrar
+Falta Módulo “Ayuda”                   
+Falta Módulo “Revisión de entrevistas” . Quiero hacer un módulo de control de calidad integrado con procesamiento.
+Revisar módulo de procesamiento.
+Transcripión. Dice que lotes no funciona.
+Chequear el tema de NER, Python y los servicios.
+Traza  de actividad – Revisar que haga la traza de todo y apunte a los códigos.
+Mapa. Carga el mapa, pero no los puntos. Además, la sección “Entrevistas por departamento” se queda “cargando”. Vamos a hacer uno para ver lugares de toma, y otro para ver lugares en el contenido.
+Queda pendiente la implementación de usuarios completa
+Autenticación y usuarios – FALTA LDAP Y GOOGLE
+Dashboard/Estadísticas - FALTA QUÉ ESTADÍSTICAS
+Permisos de acceso –  FALTA PERFILES
+Revisar códigos dependientes de dependencia.
+Al “Editar Entrevista” no guarda lo seleccionado en “Equipo/Estrategia”, tampoco las “Áreas compatibles con el Testimonio”
