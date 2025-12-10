@@ -84,14 +84,6 @@ rm -rf postgres-data
 docker-compose up -d
 ```
 
-## Desarrollo
-
-Para adaptar funcionalidades del modulo original:
-
-1. Revisar codigo en `../modulo-de-captura/` o `../www/`
-2. Copiar y simplificar controladores/modelos necesarios
-3. Adaptar vistas Blade
-
 ## Modulos avanzados
 
 - [ ] Login OK, sin LDAP o Google por ahora
