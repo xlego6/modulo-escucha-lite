@@ -141,6 +141,30 @@
             </div>
         </div>
 
+        <!-- Estado del Servicio -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fas fa-server mr-2"></i>Estado del Servicio</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" onclick="verificarServicio()">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <span id="status-ner-icon"><i class="fas fa-spinner fa-spin text-secondary mr-2"></i></span>
+                        Servicio NER: <strong id="status-ner">Verificando...</strong>
+                    </li>
+                    <li>
+                        <span id="status-anon-icon"><i class="fas fa-spinner fa-spin text-secondary mr-2"></i></span>
+                        Anonimizacion: <strong id="status-anon">Verificando...</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <!-- Anonimizadas recientemente -->
         <div class="card card-success">
             <div class="card-header">
@@ -176,6 +200,9 @@
 <?php $__env->startSection('js'); ?>
 <script>
 $(document).ready(function() {
+    // Verificar estado del servicio al cargar
+    verificarServicio();
+
     // Contador de seleccionados
     $('.check-item').on('change', function() {
         var count = $('.check-item:checked').length;
@@ -201,6 +228,37 @@ $(document).ready(function() {
         alert('Funcionalidad de procesamiento en lote pendiente de implementacion');
     });
 });
+
+function verificarServicio() {
+    $.get('<?php echo e(route("procesamientos.servicios-status")); ?>', function(data) {
+        if (data.ner && !data.ner.error) {
+            // Servicio disponible
+            $('#status-ner-icon').html('<i class="fas fa-circle text-success mr-2"></i>');
+            $('#status-ner').text('Disponible');
+
+            // Anonimizacion usa el mismo servicio NER
+            $('#status-anon-icon').html('<i class="fas fa-circle text-success mr-2"></i>');
+            $('#status-anon').text('Disponible');
+
+            // Habilitar botones
+            $('.btn-danger:not(#btn-procesar-lote)').prop('disabled', false);
+        } else {
+            // Servicio no disponible
+            $('#status-ner-icon').html('<i class="fas fa-circle text-danger mr-2"></i>');
+            $('#status-ner').text('No disponible');
+            $('#status-anon-icon').html('<i class="fas fa-circle text-danger mr-2"></i>');
+            $('#status-anon').text('No disponible');
+
+            // Deshabilitar botones (excepto los de la lista)
+            $('.btn-danger').prop('disabled', true);
+        }
+    }).fail(function() {
+        $('#status-ner-icon').html('<i class="fas fa-circle text-danger mr-2"></i>');
+        $('#status-ner').text('Error de conexion');
+        $('#status-anon-icon').html('<i class="fas fa-circle text-danger mr-2"></i>');
+        $('#status-anon').text('Error');
+    });
+}
 </script>
 <?php $__env->stopSection(); ?>
 

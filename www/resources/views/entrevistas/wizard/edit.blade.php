@@ -144,7 +144,14 @@ $(document).ready(function() {
             'responsables' => $entrevista->rel_contenido->rel_responsables->pluck('id_item')->toArray() ?? [],
             'responsables_individuales' => $entrevista->rel_contenido->responsables_individuales ?? '',
             'temas_abordados' => $entrevista->rel_contenido->temas_abordados ?? ''
-        ] : null) !!}
+        ] : null) !!},
+        lugares_mencionados: {!! json_encode(
+            \Illuminate\Support\Facades\DB::table('esclarecimiento.contenido_lugar')
+                ->where('id_e_ind_fvt', $entrevista->id_e_ind_fvt)
+                ->select('id_departamento', 'id_municipio')
+                ->get()
+                ->toArray()
+        ) !!}
     };
 
     // Inicializar Select2
@@ -215,6 +222,13 @@ $(document).ready(function() {
                 $('#contenido_responsables').val(entrevistaData.contenido.responsables).trigger('change');
                 $('#responsables_individuales').val(entrevistaData.contenido.responsables_individuales);
                 $('#temas_abordados').val(entrevistaData.contenido.temas_abordados);
+            }
+
+            // Cargar lugares mencionados existentes
+            if (entrevistaData.lugares_mencionados && entrevistaData.lugares_mencionados.length > 0) {
+                entrevistaData.lugares_mencionados.forEach(function(lugar) {
+                    agregarLugarMencionado(lugar.id_departamento, lugar.id_municipio);
+                });
             }
         }
 
@@ -663,8 +677,40 @@ $(document).ready(function() {
     });
     @endif
 
+    // === DEPARTAMENTO/MUNICIPIO DE TOMA DEL TESTIMONIO ===
+    // Manejador específico para el departamento de toma del testimonio (edición)
+    $('#id_territorio').on('change', function() {
+        var deptoId = $(this).val();
+        var muniSelect = $('#entrevista_lugar');
+
+        muniSelect.empty().append('<option value="">-- Seleccione --</option>');
+
+        if (deptoId) {
+            $.get('{{ route("api.municipios") }}', { id_departamento: deptoId }, function(data) {
+                $.each(data, function(id, nombre) {
+                    muniSelect.append('<option value="' + id + '">' + nombre + '</option>');
+                });
+            });
+        }
+    });
+
     // === EQUIPO/ESTRATEGIA DEPENDIENTE DE DEPENDENCIA ===
     var equiposData = {!! json_encode($catalogos['equipos_estrategias']) !!};
+
+    // Cargar equipos/estrategias inicial basado en dependencia guardada
+    @if($entrevista->id_dependencia_origen && $entrevista->id_equipo_estrategia)
+    (function() {
+        var depId = '{{ $entrevista->id_dependencia_origen }}';
+        var equipoSelect = $('#id_equipo_estrategia');
+        equipoSelect.empty().append('<option value="">-- Seleccione --</option>');
+        if (depId && equiposData[depId]) {
+            $.each(equiposData[depId], function(id, nombre) {
+                equipoSelect.append('<option value="' + id + '">' + nombre + '</option>');
+            });
+            equipoSelect.val('{{ $entrevista->id_equipo_estrategia }}');
+        }
+    })();
+    @endif
 
     // Cuando cambia Dependencia de Origen, actualizar opciones de Equipo/Estrategia
     $('#id_dependencia_origen').on('change', function() {

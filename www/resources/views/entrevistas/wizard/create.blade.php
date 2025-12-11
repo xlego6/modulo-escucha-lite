@@ -495,6 +495,23 @@ $(document).ready(function() {
     // === LUGARES MENCIONADOS ===
     let lugarIndex = 0;
 
+    // === DEPARTAMENTO/MUNICIPIO DE TOMA DEL TESTIMONIO ===
+    // Manejador específico para el departamento de toma del testimonio
+    $('#id_territorio').on('change', function() {
+        var deptoId = $(this).val();
+        var muniSelect = $('#entrevista_lugar');
+
+        muniSelect.empty().append('<option value="">-- Seleccione --</option>');
+
+        if (deptoId) {
+            $.get('{{ route("api.municipios") }}', { id_departamento: deptoId }, function(data) {
+                $.each(data, function(id, nombre) {
+                    muniSelect.append('<option value="' + id + '">' + nombre + '</option>');
+                });
+            });
+        }
+    });
+
     // === EQUIPO/ESTRATEGIA DEPENDIENTE DE DEPENDENCIA ===
     var equiposData = {!! json_encode($catalogos['equipos_estrategias']) !!};
 
