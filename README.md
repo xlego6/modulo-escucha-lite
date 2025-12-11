@@ -1,29 +1,35 @@
 # Modulo Escucha Lite
 
-Sistema ligero de gestion de testimonios basado en https://github.com/olimaz/modulo-escucha
+Sistema ligero de gestion de testimonios basado en modulo-escucha.
 
 ## Requisitos
 
 - Docker
 - Docker Compose
-- Python 3.9+ para los servicios NER y Transcripción
 
 ## Instalacion Rapida
 
-1. **Levantar los contenedores:**
+1. **Preparar el entorno:**
 
 ```bash
 cd modulo-escucha-lite
+# Si existe postgres-data de otra instalacion, eliminarla
+rm -rf postgres-data
+```
+
+2. **Levantar los contenedores:**
+
+```bash
 docker-compose up -d
 ```
 
-2. **Generar APP_KEY (primera vez):**
+3. **Generar APP_KEY (primera vez):**
 
 ```bash
 docker exec -it mel-app php artisan key:generate
 ```
 
-3. **Acceder a la aplicacion:**
+4. **Acceder a la aplicacion:**
 
 - URL: http://localhost:8001
 - Usuario: admin@testimonios.local
@@ -79,17 +85,15 @@ docker exec -it mel-app bash
 docker exec -it mel-app php artisan [comando]
 
 # Reiniciar BD (elimina datos)
-
 docker-compose down -v
-rm -rf postgres-data # Si da error de base de datos al loguear, se puede borrar la carpeta postgres-data de la instalación y se vuelve a levantar en docker 
+rm -rf postgres-data
 docker-compose up -d
-
 ```
 
 ## Modulos avanzados
 
 - [ ] Login OK, sin LDAP o Google por ahora
-- [ ] Entrevistas OK, añadir campos adicionales
+- [ ] Entrevistas OK, añadir campos adicionales seguún se requiera
 - [ ] Personas OK
 - [ ] Gestion de Adjuntos OK
 - [ ] Buscador OK
@@ -107,7 +111,7 @@ docker-compose up -d
 
 
 ## Otros pendientes:
-- [ ] Chequear que detalles de la entrevista muestre los cambios – Perma, no borrar
+- [ ]Chequear que detalles de la entrevista muestre los cambios – Perma, no borrar
 - [ ]Chequear que la buscadora busque los campos con los cambios. -Perma, no borrar
 - [ ]Falta Módulo “Ayuda”                   
 - [ ]Falta Módulo “Revisión de entrevistas” . Quiero hacer un módulo de control de calidad integrado con procesamiento.
