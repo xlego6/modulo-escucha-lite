@@ -566,7 +566,7 @@ class EntrevistaWizardController extends Controller
             'dependencias' => CatItem::where('id_cat', 4)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'equipos_estrategias' => $equipos_por_dependencia, // Array por dependencia
             'tipos_testimonio' => CatItem::where('id_cat', 5)->orderBy('orden')->pluck('descripcion', 'id_item'),
-            'formatos' => CatItem::where('id_cat', 100)->orderBy('orden')->pluck('descripcion', 'id_item'),
+            'formatos' => CatItem::where('id_cat', 6)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'modalidades' => CatItem::where('id_cat', 7)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'idiomas' => CatItem::where('id_cat', 8)->orderBy('orden')->pluck('descripcion', 'id_item'),
             'poblaciones' => CatItem::where('id_cat', 9)->orderBy('orden')->pluck('descripcion', 'id_item'),

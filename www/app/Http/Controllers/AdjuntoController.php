@@ -28,7 +28,7 @@ class AdjuntoController extends Controller
         $entrevista = Entrevista::with(['rel_adjuntos', 'rel_adjuntos.rel_tipo'])
             ->findOrFail($id_entrevista);
 
-        $tipos = CatItem::where('id_cat', 6)
+        $tipos = CatItem::where('id_cat', 19)
             ->orderBy('orden')
             ->pluck('descripcion', 'id_item');
 
@@ -252,7 +252,7 @@ class AdjuntoController extends Controller
 
         $adjuntos = $query->orderBy('created_at', 'desc')->paginate(20);
 
-        $tipos = CatItem::where('id_cat', 6)
+        $tipos = CatItem::where('id_cat', 19)
             ->orderBy('orden')
             ->pluck('descripcion', 'id_item')
             ->prepend('-- Todos --', '');

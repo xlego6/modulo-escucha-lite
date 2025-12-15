@@ -9,7 +9,7 @@ Sistema ligero de gestion de testimonios basado en modulo-escucha.
 
 ## Instalacion Rapida
 
-1. **Preparar el entorno:**
+1. **Preparar el entorno (importante en nuevo equipo):**
 
 ```bash
 cd modulo-escucha-lite
@@ -90,39 +90,21 @@ rm -rf postgres-data
 docker-compose up -d
 ```
 
-## Modulos avanzados
+## Desarrollo
 
-- [ ] Login OK, sin LDAP o Google por ahora
-- [ ] Entrevistas OK, añadir campos adicionales seguún se requiera
-- [ ] Personas OK
-- [ ] Gestion de Adjuntos OK
-- [ ] Buscador OK
-- [ ] Exportacion Excel OK
-- [ ] Traza de actividad OK, revisar bugs
-- [ ] Catálogos OK
+Para adaptar funcionalidades del modulo original:
+
+1. Revisar codigo en `../modulo-de-captura/` o `../www/`
+2. Copiar y simplificar controladores/modelos necesarios
+3. Adaptar vistas Blade
 
 ## Modulos Pendientes
 
-- [ ] Estadisticas - Funcionalidad básica OK, pendiente revisar métricas e indicadores específicos
-- [ ] Gestion de Usuarios - Funcionalidad básica, pendiente gestión de perfiles
-- [ ] Permisos - OK para brindar acceso. Pendiente gestión de perfiles
-- [ ] Módulo procesamiento - Pendiente, servicios suben, pero no funciona aún
-- [ ] Mapa - No aparecen puntos aún. Resolver problema con municipios
-
-
-## Otros pendientes:
-- [ ]Chequear que detalles de la entrevista muestre los cambios – Perma, no borrar
-- [ ]Chequear que la buscadora busque los campos con los cambios. -Perma, no borrar
-- [ ]Falta Módulo “Ayuda”                   
-- [ ]Falta Módulo “Revisión de entrevistas” . Quiero hacer un módulo de control de calidad integrado con procesamiento.
-- [ ]Revisar módulo de procesamiento.
-- [ ]Transcripión. Dice que lotes no funciona.
-- [ ]Chequear el tema de NER, Python y los servicios.
-- [ ]Traza  de actividad – Revisar que haga la traza de todo y apunte a los códigos.
-- [ ]Mapa. Carga el mapa, pero no los puntos. Además, la sección “Entrevistas por departamento” se queda “cargando”. Vamos a hacer uno para ver lugares de toma, y otro para ver lugares en el contenido.
-- [ ]Queda pendiente la implementación de usuarios completa
-- [ ]Autenticación y usuarios – FALTA LDAP Y GOOGLE
-- [ ]Dashboard/Estadísticas - FALTA QUÉ ESTADÍSTICAS
-- [ ]Permisos de acceso –  FALTA PERFILES
-- [ ]Revisar códigos dependientes de dependencia.
-- [ ]Al “Editar Entrevista” no guarda lo seleccionado en “Equipo/Estrategia”, tampoco las “Áreas compatibles con el Testimonio”
+- [ ] CRUD Entrevistas
+- [ ] CRUD Personas
+- [ ] Gestion de Adjuntos
+- [ ] Buscador
+- [ ] Estadisticas
+- [ ] Exportacion Excel
+- [ ] Gestion de Usuarios
+- [ ] Permisos
