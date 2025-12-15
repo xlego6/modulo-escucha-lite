@@ -797,40 +797,41 @@ INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden) 
 (196, 17, 'Otro', 'OTR', 7);
 
 -- Catálogo de Equipos/Estrategias (relacionados con Dependencias)
+-- El campo 'otro' indica el id_item de la dependencia padre, o 'otros' para estrategias generales
 INSERT INTO catalogos.cat_cat (id_cat, nombre, descripcion, editable) VALUES
 (18, 'Equipo/Estrategia', 'Equipos o estrategias por dependencia', 1);
 
--- Equipos para DMMC (id_item 30)
+-- Para DMMC - Dirección Museo de Memoria y Conflicto (id_item=30)
 INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden, otro) VALUES
-(200, 18, 'Equipo de Investigación DMMC', 'EI-DMMC', 1, '30'),
-(201, 18, 'Equipo de Curaduría', 'EC-DMMC', 2, '30'),
-(202, 18, 'Equipo de Exposiciones', 'EE-DMMC', 3, '30');
+(200, 18, 'Dimensión Física', 'DF', 1, '30'),
+(201, 18, 'Dimensión Territorial', 'DT', 2, '30'),
+(202, 18, 'Dimensión Virtual', 'DV', 3, '30');
 
--- Equipos para DCMH (id_item 31)
+-- Para DCMH - Dirección de Construcción de Memoria Histórica (id_item=31)
 INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden, otro) VALUES
-(210, 18, 'Equipo de Investigación DCMH', 'EI-DCMH', 1, '31'),
-(211, 18, 'Equipo de Casos', 'EC-DCMH', 2, '31'),
-(212, 18, 'Equipo de Territorios', 'ET-DCMH', 3, '31');
+(210, 18, 'Investigación para el Esclarecimiento', 'IPE', 10, '31'),
+(211, 18, 'Iniciativas de Memoria Histórica', 'IMH', 11, '31'),
+(212, 18, 'Reparaciones', 'REP', 12, '31');
 
--- Equipos para DAV (id_item 32)
+-- Para DAV - Dirección de Acuerdos de la Verdad (id_item=32)
 INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden, otro) VALUES
-(220, 18, 'Equipo de Contribuciones Voluntarias', 'ECV-DAV', 1, '32'),
-(221, 18, 'Equipo de Análisis', 'EA-DAV', 2, '32');
+(220, 18, 'Esclarecimiento del fenómeno paramilitar', 'EFP', 20, '32'),
+(221, 18, 'Contribuciones Voluntarias', 'CV', 21, '32');
 
--- Equipos para DADH (id_item 33)
+-- Para DADH - Dirección de Archivo de los Derechos Humanos (id_item=33)
 INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden, otro) VALUES
-(230, 18, 'Equipo de Acopio', 'EA-DADH', 1, '33'),
-(231, 18, 'Equipo de Procesamiento', 'EP-DADH', 2, '33');
+(230, 18, 'Testimonios', 'TEST', 30, '33'),
+(231, 18, 'Fondos documentales', 'FD', 31, '33');
 
--- Equipos para otras dependencias
+-- Para Otros (Estrategias: 34,35,36,37,38,39,40) - otro='otros'
 INSERT INTO catalogos.cat_item (id_item, id_cat, descripcion, abreviado, orden, otro) VALUES
-(240, 18, 'Equipo de Comunicaciones', 'EC', 1, '34'),
-(250, 18, 'Equipo Dirección General', 'EDG', 1, '35'),
-(260, 18, 'Equipo de Pedagogía', 'EP', 1, '36'),
-(270, 18, 'Equipo Enfoques Diferenciales', 'EED', 1, '37'),
-(280, 18, 'Equipo Psicosocial', 'EPS', 1, '38'),
-(290, 18, 'Equipo Territorialización', 'ET', 1, '39'),
-(300, 18, 'Sin equipo asignado', 'SEA', 1, '40');
+(240, 18, 'Estrategia de Comunicaciones', 'EC', 40, 'otros'),
+(250, 18, 'Dirección General', 'DG', 41, 'otros'),
+(260, 18, 'Estrategia de Pedagogía', 'EP', 42, 'otros'),
+(270, 18, 'Estrategia de Enfoques Diferenciales, Pueblos Étnicos y Campesinado', 'EEDPEC', 43, 'otros'),
+(280, 18, 'Estrategia Psicosocial', 'EPS', 44, 'otros'),
+(290, 18, 'Estrategia de Territorialización', 'ET', 45, 'otros'),
+(300, 18, 'Testimonio allegado al CNMH', 'TACNMH', 46, 'otros');
 
 -- Catálogo de Tipo de Archivo Adjunto
 INSERT INTO catalogos.cat_cat (id_cat, nombre, descripcion, editable) VALUES

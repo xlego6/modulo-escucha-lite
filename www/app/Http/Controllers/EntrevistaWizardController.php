@@ -552,14 +552,39 @@ class EntrevistaWizardController extends Controller
     private function getCatalogos()
     {
         // Obtener equipos/estrategias con su dependencia padre (guardada en campo 'otro')
-        $equipos_raw = CatItem::where('id_cat', 18)->orderBy('orden')->get();
+        // Solo items habilitados
+        $equipos_raw = CatItem::where('id_cat', 18)
+            ->where('habilitado', 1)
+            ->orderBy('orden')
+            ->get();
+
+        // IDs de dependencias que son "otras" (Estrategias, Dirección General, etc.)
+        // Estas son las que muestran las opciones con otro='otros'
+        $dependencias_otras = [34, 35, 36, 37, 38, 39, 40];
+
         $equipos_por_dependencia = [];
+        $equipos_otros = []; // Para guardar temporalmente los de 'otros'
+
         foreach ($equipos_raw as $equipo) {
-            $dep_id = $equipo->otro; // id_item de la dependencia padre
+            $dep_id = $equipo->otro; // id_item de la dependencia padre o 'otros'
+
+            if ($dep_id === 'otros') {
+                // Guardar para asignar a múltiples dependencias
+                $equipos_otros[$equipo->id_item] = $equipo->descripcion;
+            } else {
+                if (!isset($equipos_por_dependencia[$dep_id])) {
+                    $equipos_por_dependencia[$dep_id] = [];
+                }
+                $equipos_por_dependencia[$dep_id][$equipo->id_item] = $equipo->descripcion;
+            }
+        }
+
+        // Asignar equipos 'otros' a cada dependencia que corresponde
+        foreach ($dependencias_otras as $dep_id) {
             if (!isset($equipos_por_dependencia[$dep_id])) {
                 $equipos_por_dependencia[$dep_id] = [];
             }
-            $equipos_por_dependencia[$dep_id][$equipo->id_item] = $equipo->descripcion;
+            $equipos_por_dependencia[$dep_id] = array_replace($equipos_por_dependencia[$dep_id], $equipos_otros);
         }
 
         return [
